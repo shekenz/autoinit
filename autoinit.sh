@@ -99,6 +99,11 @@ npx tailwindcss init
 sed -i '' '/module.exports = {/a\ 
 \ \ mode:'\''jit'\'',
 ' tailwind.config.js
+sed -i '' 's/  purge: \[\],/  purge: \[\
+    '\''.\/src\/**\/*.html'\'',\
+    '\''.\/src\/**\/*.php'\'',\
+    '\''.\/src\/**\/*.js'\''\
+  \],/' tailwind.config.js
 cat tailwind.config.js
 
 # First commit
