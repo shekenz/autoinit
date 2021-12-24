@@ -97,14 +97,7 @@ cat package.json
 # Enable Tailwind JIT Mode
 echo -e "\033[36m[ tailwind.config.js ]\033[0m"
 npx tailwindcss init
-sed -i '' '/module.exports = {/a\ 
-\ \ mode:'\''jit'\'',
-' tailwind.config.js
-sed -i '' 's/  purge: \[\],/  purge: \[\
-    '\''.\/src\/**\/*.html'\'',\
-    '\''.\/src\/**\/*.php'\'',\
-    '\''.\/src\/**\/*.js'\''\
-  \],/' tailwind.config.js
+sed -i '' 's/content: \[\]/content: \['\''\.\/src\/\*\*\/\*.{html,js,php}'\''\]/' tailwind.config.js
 cat tailwind.config.js
 
 # First commit
