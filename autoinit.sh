@@ -56,6 +56,7 @@ echo "Importing default files..."
 mkdir "./src" "./src/img" "./src/js" "./src/style" "./src/fonts"
 touch "./src/index.html" "./src/js/index.js" "./src/style/main.css"
 
+cp "$ROOT/skeletons/htaccess.default" "./.htaccess"
 cp "$ROOT/skeletons/webpack.default.js" "./webpack.config.js"
 cp "$ROOT/skeletons/postcss.default.js" "./postcss.config.js"
 
